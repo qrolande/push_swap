@@ -6,7 +6,7 @@
 /*   By: qrolande <qrolande@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 22:08:06 by qrolande          #+#    #+#             */
-/*   Updated: 2021/08/14 15:23:04 by qrolande         ###   ########.fr       */
+/*   Updated: 2021/10/10 20:18:17 by qrolande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static long	ft_numcheck(char *str)
 	n = 0;
 	while (str[i])
 	{
-		if (str[i] < '0' || str[i] > '9')
+		if (str[i] < '0' || str[i] > '9' || (str[i] == '0' && str[i + 1]))
 		{
 			write(1, "error\n", 7);
 			exit (0);
@@ -56,7 +56,7 @@ int	ft_atoi(char *str)
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\f'
 		|| str[i] == '\r' || str[i] == '\n' || str[i] == '\v')
 		i++;
-	if (str[i] == '+' || str[i] == '-')
+	if ((str[i] == '+' || str[i] == '-') && str[i + 1])
 		if (str[i++] == '-')
 			res = -1;
 	nmbr = ft_numcheck(&str[i]);

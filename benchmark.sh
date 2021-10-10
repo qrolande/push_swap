@@ -4,7 +4,7 @@
 MAX=0
 ITERATIONS=0
 LIMIT=5500
-FILE=problem_100
+FILE=problem_500
 SUM=0
 
 for i in {1..20}
