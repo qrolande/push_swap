@@ -6,7 +6,7 @@
 /*   By: qrolande <qrolande@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/10 22:08:06 by qrolande          #+#    #+#             */
-/*   Updated: 2021/10/10 20:18:17 by qrolande         ###   ########.fr       */
+/*   Updated: 2021/10/11 20:47:38 by qrolande         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static long	ft_numcheck(char *str)
 	n = 0;
 	while (str[i])
 	{
-		if (str[i] < '0' || str[i] > '9' || (str[i] == '0' && str[i + 1]))
+		if (str[i] < '0' || str[i] > '9')
 		{
 			write(1, "error\n", 7);
 			exit (0);
